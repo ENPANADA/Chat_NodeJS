@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect('https://chatnodejs.up.railway.app/:4000');
+var socket = io.connect('localhost:4000');
 
 // Query DOM
 var message = document.getElementById('message'),
