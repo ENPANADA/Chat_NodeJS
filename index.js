@@ -32,3 +32,4 @@ io.on('connection', (socket) => {
     });
 
 });
+console.log('Funciona pofavo');
