@@ -1,69 +1,89 @@
 body {
   font-family: "Nunito";
+  background-color: #302d2d;
 }
 
 h2 {
-  font-size: 18px;
-  padding: 10px 20px;
-  color: #575ed8;
+  font-size: 25px;
+  padding: 30px 0;
+  color: #b6ff41;
+  text-align: center;
+  border-bottom: 5px solid #b6ff41;
+  margin: 0;
 }
 
 #mario-chat {
   max-width: 600px;
   margin: 30px auto;
-  border: 1px solid #ddd;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 2px;
+  border: 5px solid #b6ff41;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(216, 216, 216, 0.5);
 }
 
 #chat-window {
-  height: 400px;
+  height: 500px;
   overflow: auto;
-  background: #f9f9f9;
+  background: #b3b3b3;
 }
 
 #output p {
-  padding: 14px 0px;
-  margin: 0 20px;
-  border-bottom: 1px solid #e9e9e9;
-  color: #555;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #b6ff41;
+  background-color: #302d2d;
+  border-radius: 20px;
+  width: max-content;
+  border-bottom-left-radius: 0;
+  color: #e7e7e7;
 }
 
 #feedback p {
-  color: #aaa;
-  padding: 14px 0px;
-  margin: 0 20px;
+  color: #b6ff41;
+  padding: 10px;
+  margin: 10px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #output strong {
-  color: #575ed8;
+  color: #b6ff41;
 }
 
 label {
   box-sizing: border-box;
   display: block;
   padding: 10px 20px;
+
+}
+
+input:focus{
+  border: 0;
+  border: 5px solid #302d2d;
 }
 
 input {
   padding: 10px 20px;
   box-sizing: border-box;
-  background: #eee;
   border: 0;
   display: block;
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  font-family: Nunito;
+  background: #f7f7f7;
+  border: 5px solid #b6ff41;
   font-size: 16px;
 }
 
 button {
-  background: #575ed8;
-  color: #fff;
+  font-weight: bold;
+  background: #47d371;
+  color: #302d2d;
   font-size: 18px;
-  border: 0;
-  padding: 12px 0;
+  border: 5px solid #b6ff41;
+  padding: 12px;
   width: 100%;
-  border-radius: 0 0 2px 2px;
+  cursor: pointer;
+  transition: transform,color 0.2s ease;
+}
+
+button:hover{
+  color: #f7f7f7;
+  transform: scale(1.01);
 }
