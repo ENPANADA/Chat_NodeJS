@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect('https://enpanada.github.io/Chat_NodeJS:4000');
+var socket = io.connect('localhost:4000');
 
 // Query DOM
 var message = document.getElementById('message'),
