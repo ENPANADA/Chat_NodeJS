@@ -5,14 +5,17 @@ const port = process.env.PORT || 4000
 // App setup
 var app = express();
 var server = app.listen(port, function(){
-    console.log('listening for requests on port 4000,');
+    console.log('listening for requests on port 4000');
 });
 
 // Static files
-app.use(express.static('./'));
+app.use(express.static('public'));
+console.log('App Use');
 
 // Socket setup & pass server
 var io = socket(server);
+console.log('Socket Server');
+
 io.on('connection', (socket) => {
 
     console.log('made socket connection', socket.id);
