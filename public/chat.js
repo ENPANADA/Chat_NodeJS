@@ -2,14 +2,15 @@
 var socket = io.connect('https://chatnodejs.up.railway.app/:4000');
 
 // Query DOM
-var message = document.getElementById('message'),
-      handle = document.getElementById('handle'),
-      btn = document.getElementById('send'),
-      output = document.getElementById('output'),
-      feedback = document.getElementById('feedback');
+let message = document.getElementById('message');
+let handle = document.getElementById('handle');
+let btn = document.getElementById("send");
+let output = document.getElementById('output');
+let feedback = document.getElementById('feedback');
 
 // Emit events
-btn.addEventListener('click', function(){
+btn.addEventListener("click", function(){
+    console.log('Nuevo mensaje por enviar');
     socket.emit('chat', {
         message: message.value,
         handle: handle.value
@@ -19,7 +20,7 @@ btn.addEventListener('click', function(){
 
 message.addEventListener('keypress', function(){
     socket.emit('typing', handle.value);
-})
+});
 
 // Listen for events
 socket.on('chat', function(data){
