@@ -11,11 +11,7 @@ let feedback = document.getElementById('feedback');
 // Emit events
 btn.addEventListener("click", function(){
     console.log('Nuevo mensaje por enviar Handle:', message.value, ' Message:',handle.value);
-    socket.broadcast.emit('chat', {
-        message: message.value,
-        handle: handle.value
-    });
-    io.sockets.emit('chat', {
+    socket.emit('chat', {
         message: message.value,
         handle: handle.value
     });
