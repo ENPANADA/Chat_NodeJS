@@ -19,11 +19,11 @@ io.on('connection', (socket) => {
     // Handle chat event
     socket.on('chat', function(data){
         console.log(data.handle, 'envio el mensaje: ',data.message);
-        io.sockets.emit('chat', data);
+        io.emit('chat', data);
     });
     // Handle typing event
     socket.on('typing', function(data){
-        socket.broadcast.emit('typing', data);
+        socket.emit('typing', data);
     });
 
 });
