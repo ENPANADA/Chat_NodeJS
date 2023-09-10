@@ -17,12 +17,12 @@ var io = socket(server);
 io.on('connection', (socket) => {
     console.log('Nuevo usuario conectado, ID: ', socket.id);
     // Handle chat event
-    socket.on('chat', function(data){
+    io.on('chat', function(data){
         console.log(data.handle, 'envio el mensaje: ',data.message);
         io.emit('chat', data);
     });
     // Handle typing event
-    socket.on('typing', function(data){
+    io.on('typing', function(data){
         socket.emit('typing', data);
     });
 
