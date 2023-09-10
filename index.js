@@ -12,7 +12,7 @@ var server = app.listen(port, function(){
 app.use(express.static('./public'));
 
 // Socket setup & pass server
-var io = socket(server);
+var io = new socket(server);
 
 io.on('connection', (socket) => {
     console.log('Nuevo usuario conectado, ID: ', socket.id);
