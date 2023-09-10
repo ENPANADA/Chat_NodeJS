@@ -9,10 +9,10 @@ var server = app.listen(port, function(){
 });
 
 // Static files
-app.use(express.static('./public'));
+app.use(express.static('public'));
 
 // Socket setup & pass server
-var io = new socket(server);
+var io = socket(server);
 
 io.on('connection', (socket) => {
     console.log('Nuevo usuario conectado, ID: ', socket.id);
