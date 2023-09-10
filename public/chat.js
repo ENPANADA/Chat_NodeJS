@@ -15,6 +15,7 @@ btn.addEventListener("click", function(){
         message: message.value,
         handle: handle.value
     });
+    output.innerHTML += '<p><strong>' + handle.value + ': </strong>' + message.value + '</p>';
     message.value = "";
 });
 
