@@ -10,12 +10,10 @@ let feedback = document.getElementById('feedback');
 
 // Emit events
 btn.addEventListener("click", function(){
-    console.log('Nuevo mensaje por enviar Handle:', message.value, ' Message:',handle.value);
     socket.emit('chat', {
         message: message.value,
         handle: handle.value
     });
-    output.innerHTML += '<p><strong>' + handle.value + ': </strong>' + message.value + '</p>';
     message.value = "";
 });
 
