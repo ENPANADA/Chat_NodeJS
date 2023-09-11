@@ -1,5 +1,6 @@
 // Make connection
-var socket = io.connect('https://chatnodejs.up.railway.app/:4000');
+const PORT1 = process.env.PORT || 4000
+var socket = io.connect('https://chatnodejs.up.railway.app/:'+PORT1);
 
 // Query DOM
 let message = document.getElementById('message');
