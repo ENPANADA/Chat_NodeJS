@@ -4,8 +4,7 @@
   "description": "A chat app using WebSockets",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon index.js"
   },
   "author": "The Net Ninja",
   "license": "ISC",
